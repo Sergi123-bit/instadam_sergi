@@ -1,16 +1,51 @@
-# instadam_web
+📸 InstaDAM
+Aplicació mòbil inspirada en Instagram desenvolupada amb Flutter com a projecte de pràctica DAM. Combina SQFlite per a la base de dades local i SharedPreferences per a les preferències de l'usuari.
+---
+Dependències principals: "sqflite", "path", "shared_preferences"
+---
+🗂️ ESTRUCTURA DEL PROJECTE
+```
+lib/
+├── main.dart               # Punt d'entrada i gestió del tema global
+├── splash_screen.dart      # Pantalla de càrrega inicial
+├── db_helper.dart          # SQFlite: usuaris, posts, likes i comentaris
+├── post_provider.dart      # Singleton d'estat compartit dels posts
+├── login_page.dart         # Login i registre
+├── feed_page.dart          # Feed principal
+├── post_card.dart          # Widget reutilitzable per a cada post
+├── new_post_page.dart      # Formulari de creació de posts
+├── profile_page.dart       # Perfil d'usuari
+├── edit_profile_page.dart  # Edició de perfil i contrasenya
+└── settings_page.dart      # Configuració de l'app
+```
+---
+✅ FUNCIONALITATS IMPLEMENTADES
 
-A new Flutter project.
+🔐 Login i Registre
+Formulari amb validació de camps. Inclou l'opció "Recordar usuari" guardada amb SharedPreferences: si ja has iniciat sessió, l'app et porta directament al feed. Els usuaris es guarden a SQFlite.
 
-## Getting Started
+📰 Feed principal
+Mostra totes les publicacions en ordre invers. Cada post inclou imatge, autor, descripció, temps de publicació, likes i comptador de comentaris. El feed s'actualitza automàticament en afegir un nou post.
 
-This project is a starting point for a Flutter application.
+❤️ Likes
+Pots donar i treure like a qualsevol publicació. El canvi es reflecteix a la UI a l'instant i es distingeix visualment amb icona plena/buida i color, sense dependre únicament del color (accessibilitat).
 
-A few resources to get you started if this is your first Flutter project:
+➕ Crear posts
+Pantalla accessible des del botó "+" del feed. Permet triar una imatge de mostra o introduir una URL pròpia, escriure una descripció i afegir text alternatiu per a la imatge. Inclou previsualització abans de publicar.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+💬 Comentaris
+Cada post té el seu propi sistema de comentaris. Es poden veure i afegir des del "PostCard". El comptador s'actualitza a l'instant i cada comentari mostra autor, text i temps.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+👤 Perfil i edició
+Mostra nom d'usuari, nom real, biografia i estadístiques. Inclou un grid amb els posts propis de l'usuari. Des de la pantalla d'edició es pot modificar el nom, el nom real i la contrasenya real (actualitzada a SQFlite). El correu apareix bloquejat i no es pot modificar. El resultat mostra feedback amb emoji: 👍 si ha anat bé, 👎 si hi ha hagut un error.
+
+⚙️ Configuració
+Tot guardat amb SharedPreferences:
+- Tema clar/fosc aplicat a tota l'app en temps real.
+- Idioma amb 3 opcions (Català, Español, English): la pàgina es tradueix completament en canviar-lo.
+- Notificacions activar/desactivar (simulació).
+- Tancar sessió amb diàleg de confirmació, elimina les dades de SharedPreferences i torna al login.
+
+♿ Accessibilitat
+Tots els elements interactius tenen "Semantics" amb label descriptiu, "liveRegion" als SnackBars, "MergeSemantics" per agrupar elements relacionats i mida mínima de 48dp a tots els botons.
+---
