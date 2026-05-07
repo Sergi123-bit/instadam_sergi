@@ -57,44 +57,7 @@ Tancar sessió amb diàleg de confirmació, elimina les dades de SharedPreferenc
 
 ♿ Accessibilitat
 L'aplicació ha estat dissenyada seguint les pautes WCAG 2.1 i és compatible amb TalkBack (Android) i VoiceOver (iOS).
-Semàntica i navegació
-Tots els elements interactius tenen `Semantics` amb `label` descriptiu i clar.
-`MergeSemantics` agrupa elements relacionats (capçalera del post, comentaris, estadístiques del perfil) perquè TalkBack els llegeixi com una unitat.
-`ExcludeSemantics` oculta elements purament decoratius com avatars i comptadors duplicats.
-`onTapHint` als botons contextuals indica l'acció concreta ("Donar m'agrada", "Veure comentaris").
 
-Estat i feedback
-`liveRegion: true` als `SnackBar` perquè TalkBack anunciï els canvis d'estat sense que l'usuari hagi de moure el focus (likes, comentaris enviats, canvi de tema...).
-`toggled` als `SwitchListTile` per indicar correctament l'estat actiu/inactiu (tema fosc, notificacions).
-Feedback visual i textual simultani: mai es transmet informació únicament mitjançant el color.
-
-Disseny inclusiu
-Mida mínima de 48dp en tots els botons i elements tàctils.
-Els camps de formulari sempre tenen `labelText` visible, mai només `hintText` com a única referència.
-Les icones van acompanyades de text o `Semantics label` (mai icones soles sense context).
-El text escala amb les preferències del sistema: no es fixa cap `textScaleFactor`.
----
-
-🎨 Decisió de colors
-La paleta de colors s'ha triat tenint en compte el contrast mínim WCAG AA (4.5:1) per garantir la llegibilitat.
-Element	Color clar	Color fosc	Motiu
-Color primari	`#1565C0` (blau fosc)	`#1565C0`	Contrast alt sobre blanc i negre
-Fons Splash	`#1565C0`	`#1565C0`	Identitat visual de l'app
-Like actiu	`Colors.red` + icona plena	`Colors.red` + icona plena	Doble senyal: color + forma
-Feedback èxit	`Colors.green[700]` + 👍	`Colors.green[700]` + 👍	Color + emoji, no depèn d'un sol codi
-Feedback error	`Colors.red[700]` + 👎	`Colors.red[700]` + 👎	Color + emoji, no depèn d'un sol codi
-Camp bloquejat	`Colors.grey[200]`	`Colors.grey[800]`	Indica visualment que no és editable
-Botó de logout	`Colors.red` + text blanc	`Colors.red` + text blanc	Acció destructiva clarament diferenciada
-El tema clar i fosc s'aplica globalment des de `main.dart` mitjançant `ThemeMode`, sense forçar cap color fix a les pantalles individuals, de manera que tots els widgets s'adapten automàticament.
----
-
-🛠️ Tecnologies
-Tecnologia	Ús
-Flutter / Dart	Framework i llenguatge principal
-SQFlite	Usuaris, posts, likes i comentaris
-SharedPreferences	Sessió, tema, idioma i perfil
-Semantics API	Accessibilitat (TalkBack / VoiceOver)
----
 
 👨‍💻 Autor
 Sergi Terrones — CFGS Desenvolupament d'Aplicacions Multiplataforma (DAM)
