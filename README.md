@@ -18,17 +18,17 @@ Dependències principals: sqflite, path, shared_preferences
 **🗂️ Estructura del projecte**
 
 lib/
-├── main.dart               # Punt d'entrada i gestió del tema global
-├── splash_screen.dart      # Pantalla de càrrega inicial
-├── db_helper.dart          # SQFlite: usuaris, posts, likes i comentaris
-├── post_provider.dart      # Singleton d'estat compartit dels posts
-├── login_page.dart         # Login i registre
-├── feed_page.dart          # Feed principal
-├── post_card.dart          # Widget reutilitzable per a cada post
-├── new_post_page.dart      # Formulari de creació de posts
-├── profile_page.dart       # Perfil d'usuari
-├── edit_profile_page.dart  # Edició de perfil i contrasenya
-└── settings_page.dart      # Configuració de l'app
+|-- main.dart               -> Punt d'entrada i gestió del tema global
+|-- splash_screen.dart      -> Pantalla de càrrega inicial
+|-- db_helper.dart          -> SQFlite: usuaris, posts, likes i comentaris
+|-- post_provider.dart      -> Singleton d'estat compartit dels posts
+|-- login_page.dart         -> Login i registre
+|-- feed_page.dart          -> Feed principal
+|-- post_card.dart          -> Widget reutilitzable per a cada post
+|-- new_post_page.dart      -> Formulari de creació de posts
+|-- profile_page.dart       -> Perfil d'usuari
+|-- edit_profile_page.dart  -> Edició de perfil i contrasenya
+`-- settings_page.dart      -> Configuració de l'app
 
 ────────────────────────────────────
 
