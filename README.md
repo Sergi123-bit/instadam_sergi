@@ -1,3 +1,5 @@
+
+
 📸 InstaDAM
 Aplicació mòbil inspirada en Instagram desenvolupada amb Flutter com a projecte de pràctica DAM. Combina SQFlite per a la base de dades local i SharedPreferences per a les preferències de l'usuari.
 ---
@@ -93,6 +95,10 @@ SQFlite	Usuaris, posts, likes i comentaris
 SharedPreferences	Sessió, tema, idioma i perfil
 Semantics API	Accessibilitat (TalkBack / VoiceOver)
 ---
+
+👨‍💻 Autor
+Sergi Terrones — CFGS Desenvolupament d'Aplicacions Multiplataforma (DAM)
+
 
 👨‍💻 Autor
 Sergi Terrones — CFGS Desenvolupament d'Aplicacions Multiplataforma (DAM)
