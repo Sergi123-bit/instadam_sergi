@@ -100,5 +100,3 @@ Semantics API	Accessibilitat (TalkBack / VoiceOver)
 Sergi Terrones — CFGS Desenvolupament d'Aplicacions Multiplataforma (DAM)
 
 
-👨‍💻 Autor
-Sergi Terrones — CFGS Desenvolupament d'Aplicacions Multiplataforma (DAM)
